@@ -1,0 +1,30 @@
+﻿<ContentDialog
+    x:Class="ActuallyGoodProgramCompat.ProgramCompat"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    x:Name="NotifDialog"
+    Background="{ThemeResource SystemControlAcrylicElementBrush}"
+    Title="This app can't run on this device"
+    CornerRadius="8"
+    Width="330">
+
+
+    <Grid Margin="0,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="32" />
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0">
+            <TextBlock Text="App Name: Some old program" FontSize="15"/>
+            <TextBlock Text="Publisher: Some publisher" FontSize="15" Margin="0,0,0,10"/>
+            <TextBlock Text="This app can't run because it causes security or performance issues on Windows. A new version may be available. Check with your software provider for an updated version that runs on this version of Windows." TextWrapping="WrapWholeWords" FontWeight="Thin" FontSize="13" Margin="0,0,0,20"/>
+        </StackPanel>
+        <Grid Height="32" VerticalAlignment="Bottom" Grid.Row="1">
+            <Button Content="Learn More" x:Name="LearnMore" Width="220" Click="LearnMore_Click"/>
+            <Button Content="Cancel" x:Name="CancelButton" Style="{ThemeResource AccentButtonStyle}" HorizontalAlignment="Right" Width="220" Click="CancelButton_Click"/>
+        </Grid>
+    </Grid>
+</ContentDialog>
